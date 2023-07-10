@@ -3,7 +3,7 @@ return {
     "ellisonleao/carbon-now.nvim",
     opts = {
       base_url = "https://carbon.now.sh/",
-      open_cmd = "xdg-open",
+      open_cmd = vim.fn.has("macosunix") and "open" or "xdg-open",
       options = {
         theme = "monokai",
         window_theme = "none",
